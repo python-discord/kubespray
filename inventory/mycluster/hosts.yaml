@@ -1,23 +1,23 @@
 all:
   hosts:
     hopper:
-      ansible_host: 89.58.24.117
+      ansible_host: hopper.box.pydis.wtf
       ip: 89.58.24.117
       access_ip: 89.58.24.117
     turing:
-      ansible_host: 89.58.25.151
+      ansible_host: turing.box.pydis.wtf
       ip: 89.58.25.151
       access_ip: 89.58.25.151
     lovelace:
-      ansible_host: 89.58.26.118
+      ansible_host: lovelace.box.pydis.wtf
       ip: 89.58.26.118
       access_ip: 89.58.26.118
     neumann:
-      ansible_host: 89.58.12.244
+      ansible_host: neumann.box.pydis.wtf
       ip: 89.58.12.244
       access_ip: 89.58.12.244
     ritchie:
-      ansible_host: 89.58.25.224
+      ansible_host: ritchie.box.pydis.wtf
       ip: 89.58.25.224
       access_ip: 89.58.25.224
   children:
