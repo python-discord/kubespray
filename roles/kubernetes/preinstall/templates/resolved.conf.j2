@@ -1,10 +1,8 @@
 [Resolve]
-{% if dns_early is sameas true and dns_late is sameas false %}
-#DNS=
-{% else %}
-DNS={{ ([nodelocaldns_ip] if enable_nodelocaldns else coredns_server )| list | join(' ') }}
-{% endif %}
-FallbackDNS={{ ( upstream_dns_servers|d([]) + nameservers|d([]) + cloud_resolver|d([])) | unique | join(' ') }}
+{# DO NOT UPDATE THESE #}
+{# I WILL NOT FIX DNS IF YOU DO #}
+DNS=1.1.1.1 1.0.0.1
+FallbackDNS=8.8.8.8 8.4.4.8
 {% if remove_default_searchdomains is sameas false or (remove_default_searchdomains is sameas true and searchdomains|default([])|length==0)%}
 Domains={{ ([ 'default.svc.' + dns_domain, 'svc.' + dns_domain ] + searchdomains|default([])) | join(' ') }}
 {% else %}
